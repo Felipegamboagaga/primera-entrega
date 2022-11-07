@@ -5,9 +5,9 @@
 </head>
 <body>
 
-
-<p>{{fin}}</p>
-
+{% for i in fam %}
+<li>Nombre: {{i.nombre}},    Edad: {{i.edad}},  Fecha de Nacimiento: {{i.fecha_nacimiento}} </li>
+{% endfor %}
 
 </body>
 </html>

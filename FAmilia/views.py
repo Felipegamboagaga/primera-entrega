@@ -6,12 +6,11 @@ from django.template import Template, context, loader
 # Create your views here.
 def fam(request):
     fam = familia.objects.all()
-    fin = ""
-    for miembro in fam:
-        fin += f"({familia.nombre}, {familia.edad}, {familia.ultimo_log}"
+    context = {'fam': fam}
+  
         
    
 
-    return render(request, 'template.html', {'fam':fam, 'fin':fin})
+    return render(request, 'template.html', context)
     
     
